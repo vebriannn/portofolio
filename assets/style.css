@@ -1,0 +1,616 @@
+
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Viga&display=swap');
+@import url('https://fonts.cdnfonts.com/css/prestige-elite-std');
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+
+/* variable css */
+:root {
+    /* background */
+    --bg-black: #2C2D33;
+    --bg-green: #00D085;
+
+    /* color text */
+    --color-white: #ECECEF;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: var(--color-white);
+}
+
+
+/* loading screen */
+.loading {
+    background-color: var(--bg-black);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.loading .loading-screen {
+    transition: 0.5s ease-in-out;
+    opacity: 1;
+    background-color: var(--color-white);
+    width: 140px;
+    height: auto;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.loading .loading-screen::before {
+    content: "";
+    background-color: var(--bg-green);
+    width: 100%;
+    position: absolute;
+    margin: -130px 0 0 0;
+    padding-right: 0px !important;
+    animation: loadscreen 2.5s forwards;
+}
+
+
+@keyframes loadscreen {
+    0%{
+        height: 0px;
+        background-color: #ff0000;
+    }
+    100%{
+        height: calc(100% + 140px);
+    }
+}
+
+.loading .loading-screen .black-screen {
+    width: 92%;
+    height: 92%;
+    background-color: var(--bg-black);
+    border-radius: 100%;
+    z-index: 1;
+    overflow: hidden;   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading .text-loading {
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.loading .text-loading.show-text {
+    opacity: 1;
+}
+
+.loading .text-loading h1 {
+    font-family: "Press Start 2P", sans-serif;
+}
+
+.load {
+    opacity: 0;
+    background-color: var(--bg-black);
+}
+
+/* head content */
+
+.content {
+    height: max-content;
+    padding-bottom: 80px;
+    background-color: var(--bg-black);
+    display: none;
+}
+
+/* .content .head-content,
+.content .body-content {
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+} */
+
+.content .head-content .container {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.content .head-content .profile {
+    position: relative;
+    width: max-content;
+    height: max-content;
+    border-radius: 100%;
+    top: 80px;
+}
+
+.content .head-content .profile img{
+    position: relative;
+    width: max-content;
+    height: max-content;
+    border-radius: 100%;
+    background: linear-gradient(0deg, black, rgb(44, 43, 43));
+    z-index: 2;
+    /* width: 140px;
+    height: 140px; */
+}
+
+.border-gradient::before, .border-gradient::after {
+    padding: 0px;
+    content: '';
+    position: absolute;
+    background: linear-gradient(#e6fb04, #ff6600, #00ff66, #00ffff,
+    #ff00ff, #ff0099, #6e0dd0, #ff3300, #099fff);
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+    border-radius: 100%;
+    background-position: 400%;
+    animation: animate 4s linear infinite;
+    left: -5px;
+    top: -5px;
+    
+}
+
+.border-gradient::after {
+    filter: blur(6px);
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(180deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+.content .head-content .container .title {
+    font-size: 32px;
+    margin-top: 100px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+.content .head-content .container .text-changes .subtitle {
+    font-size: 18px;
+    font-family: 'Prestige Elite Std', sans-serif;
+    font-weight: 300;
+}
+
+.content .head-content .container .text-changes .dynamic-text {
+    width: 110px;
+    height: 30px;
+    margin: -21px 0 0 10px;
+    background-color: var(--bg-green);
+    border-radius: 4px;
+}
+
+.content .head-content .container .text-changes .dynamic-text .dy-text {
+    font-size: 18px;
+    font-family: 'Prestige Elite Std', sans-serif;
+    font-weight: 300;
+    margin: 5px 0 0 0;
+    padding: 0;
+}
+
+.content .head-content .container .text-changes .dynamic-text .typed-cursor {
+    margin-top: -2px;
+}
+
+
+.content .head-content .container .icon-mediasocial {
+    margin-top: 0px;
+}
+
+.content .head-content .container .icon-mediasocial .row{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.content .head-content .container .icon-mediasocial .row .col-2 a {
+    font-size: 24px;
+}
+
+.content .head-content .container .icon-mediasocial .row .col-2 {
+    transition: 0.3s ease-in-out;
+}
+
+.content .head-content .container .icon-mediasocial .row .col-2:hover {
+    transform: translateY(-4px);
+}
+
+/* body content */
+
+.content .body-content .btn-content {
+    margin-top: 32px;
+}
+
+.content .body-content .btn-content nav .nav-pills{
+    gap: 34px;
+}
+
+.content .body-content .btn-content nav .nav-pills .nav-item .nav-link.active {
+    background-color: var(--bg-green);
+    border: 2px solid var(--bg-green);
+}
+
+.content .body-content .btn-content nav .nav-pills .nav-item .nav-link {
+    color: white;
+    border: 2px solid var(--bg-green);
+    background-color: transparent;
+    padding: 4px 20px;
+    font-size: 18px;
+    font-family: 'Prestige Elite Std', sans-serif;
+    padding-top: 8px;
+}
+
+.content .body-content .content-tab {
+    margin-top: 60px;
+}
+
+.content .body-content .content-tab .tab-content .experience .container .row {
+    margin: 0 auto;
+    row-gap: 64px;
+}
+
+.content .body-content .content-tab .tab-content .experience .container .row .col-sm-3 .tech {
+    width: 130px;
+    height: 70px;
+    border: 2px solid var(--bg-green);
+    border-radius: 4px;
+    transition: 0.3s ease-in-out;
+}
+
+.custom-tooltip {
+    --bs-tooltip-bg: var(--bg-green);
+    --bs-tooltip-color: var(--bs-white);
+}
+
+.content .body-content .content-tab .tab-content .portofolio .container-fluid .row {
+    margin: 0 auto;
+    row-gap: 64px;
+}
+
+.content .body-content .content-tab .tab-content .portofolio .container-fluid .row .column-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content .body-content .content-tab .tab-content .portofolio .container-fluid .row .column-items .card {
+    width: 18rem;
+    height: 158px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border: none;
+    box-shadow: 8px 8px 1px var(--bg-green);
+    transition: 0.3s ease-in-out;
+}
+
+.card-hover {
+    box-shadow: -8px -8px 1px var(--bg-green) !important;
+}
+
+.content .body-content .content-tab .tab-content .portofolio .container-fluid .row .column-items .card .card-body {
+    position: absolute;
+    bottom: -66px;
+    transition: 0.5s ease-in-out;
+    z-index: 1;
+}
+
+.blur-portofolio {
+    backdrop-filter: blur(1px);
+}
+
+.show-link {
+    position: absolute;
+    bottom: 44px !important;
+}
+
+.content .body-content .content-tab .tab-content .portofolio .container-fluid .row  .column-items .card a {
+    color: var(--bg-green);
+    text-decoration: none;
+    font-family: "Akaya Telivigala", sans-serif;
+    background-color: var(--color-white);
+    padding: 10px 20px;
+    border-radius: 4px;
+    box-shadow: 4px 4px 11px rgba(17, 168, 159, 40%);
+}
+
+.content .body-content .content-tab .tab-content .portofolio .container-fluid .row  .column-items .card a i {
+    color: var(--bg-green);
+    filter: drop-shadow(2px 2px 1px #2C2D33);
+}
+
+
+.content .body-content .content-tab .tab-content .achievement .container .row  .column-items .card {
+    width: 80%;
+    height: max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border: none;
+    box-shadow: 8px 8px 1px var(--bg-green);
+    transition: 0.3s ease-in-out;
+}
+
+.card-hover {
+    box-shadow: -8px -8px 1px var(--bg-green) !important;
+}
+
+.content .body-content .content-tab .tab-content .achievement .container .row .column-items .card .card-body {
+    position: absolute;
+    bottom: -66px;
+    transition: 0.5s ease-in-out;
+    z-index: 1;
+}
+
+.blur-achievement {
+    backdrop-filter: blur(1px);
+}
+
+.show-link {
+    position: absolute;
+    bottom: 44px !important;
+}
+
+.content .body-content .content-tab .tab-content .achievement .container .row .column-items .card a {
+    color: var(--bg-green);
+    text-decoration: none;
+    font-family: "Akaya Telivigala", sans-serif;
+    background-color: var(--color-white);
+    padding: 10px 20px;
+    border-radius: 4px;
+    box-shadow: 4px 4px 11px rgba(17, 168, 159, 40%);
+}
+
+.content .body-content .content-tab .tab-content .achievement .container .row .column-items .card a i {
+    color: var(--bg-green);
+    filter: drop-shadow(2px 2px 1px #2C2D33);
+}
+
+.content .body-content .content-tab .tab-content .achievement .container .row .column-items .card {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.content .body-content .content-tab .tab-content .portofolio .container-fluid .row .column-items .card {
+    width: 100%;
+    height: 180px;
+}
+
+.img-thumbnail {
+    padding: 0px !important;
+    border: none;
+    border-radius: 0px;
+    background: transparent;
+}
+
+
+@media screen and (min-width: 0px) and (max-width: 479px) {
+
+    .content .head-content .profile img{
+        width: 130px;
+        height: max-content;
+    }
+
+    .content .head-content .container .title {
+        font-size: 26px;
+    }
+    
+    .content .body-content .btn-content nav .nav-pills {
+        gap: 12px;
+    }
+
+    .content .body-content .content-tab .tab-content .portofolio .container-fluid .row {
+        row-gap: 60px;
+    }
+
+    .content .body-content .btn-content nav .nav-pills .nav-item .nav-link,
+    .content .head-content .container .text-changes .subtitle,
+    .content .head-content .container .text-changes .dynamic-text .dy-text  {
+        font-size: 14px;
+    }
+
+    .content .head-content .container .icon-mediasocial .row .col-2 a {
+        font-size: 22px;
+    }
+
+    .content .body-content .content-tab .tab-content .experience .container .row {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .content .body-content .content-tab .tab-content .experience .container .row .col-sm-3 .tech {
+        width: 110px;
+        height: 60px;
+    }
+
+    .content .body-content .content-tab .tab-content .portofolio .container-fluid .row .column-items .card {
+        width: 80%;
+        height: 100%;
+    }
+
+    .content .body-content .content-tab .tab-content .achievement .container .row .column-items .card a {
+        font-size: 16px;
+        padding: 8px 10px;
+    }
+
+    .show-link {
+        bottom: 64px !important;
+    }
+
+    .img-thumbnail {
+        padding: 0px !important;
+        border: none;
+        border-radius: 0px;
+        background: transparent;
+    }
+
+    .content .body-content .btn-content nav .nav-pills .nav-item .nav-link {
+        padding: 8px 10px;
+    }
+
+    .content .body-content .content-tab .tab-content .achievement .container .row .column-items .card {
+        width: 50%;
+        height: max-content;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 480px) and (max-width: 575px){ 
+
+    .content .head-content .container .title {
+        font-size: 28px;
+    }
+    
+    .content .body-content .btn-content nav .nav-pills {
+        gap: 14px;
+    }
+
+    .content .body-content .content-tab .tab-content .portofolio .container-fluid .row {
+        row-gap: 60px;
+    }
+
+    .content .body-content .btn-content nav .nav-pills .nav-item .nav-link,
+    .content .head-content .container .text-changes .subtitle,
+    .content .head-content .container .text-changes .dynamic-text .dy-text  {
+        font-size: 14px;
+    }
+
+    .content .head-content .container .icon-mediasocial .row .col-2 a {
+        font-size: 22px;
+    }
+
+    .content .body-content .content-tab .tab-content .experience .container .row .col-3 .tech {
+        width: 110px;
+        height: 60px;
+    }
+
+    .content .body-content .content-tab .tab-content .portofolio .container-fluid .row .column-items .card {
+        width: 80%;
+        height: 100%;
+    }
+
+    .content .body-content .content-tab .tab-content .achievement .container .row .column-items .card a {
+        font-size: 16px;
+        padding: 8px 10px;
+    }
+
+    .show-link {
+        bottom: 64px !important;
+    }
+
+    .img-thumbnail {
+        padding: 0px !important;
+        border: none;
+        border-radius: 0px;
+        background: transparent;
+    }
+
+    .content .body-content .content-tab .tab-content .achievement .container .row .column-items .card {
+        width: 44%;
+        height: max-content;
+        margin: 0 auto;
+    }
+
+    .content .body-content .content-tab .tab-content .experience .container .row {
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px){ 
+
+    .content .head-content .container .title {
+        font-size: 30px;
+    }
+    
+    .content .body-content .btn-content nav .nav-pills {
+        gap: 20px;
+    }
+
+    .content .body-content .content-tab .tab-content .portofolio .container-fluid .row {
+        row-gap: 40px;
+    }
+
+    .content .body-content .btn-content nav .nav-pills .nav-item .nav-link,
+    .content .head-content .container .text-changes .subtitle,
+    .content .head-content .container .text-changes .dynamic-text .dy-text  {
+        font-size: 16px;
+    }
+
+    .content .head-content .container .icon-mediasocial .row .col-2 a {
+        font-size: 22px;
+    }
+
+    .content .body-content .content-tab .tab-content .experience .container .row .col-3 .tech {
+        width: 110px;
+        height: 60px;
+    }
+
+    .content .body-content .content-tab .tab-content .portofolio .container-fluid .row .column-items .card {
+        height: 130px;
+        width: 15rem;
+    }
+
+    .content .body-content .content-tab .tab-content .achievement .container .row .column-items .card a {
+        font-size: 16px;
+        padding: 8px 10px;
+    }
+
+    .show-link {
+        bottom: 36px !important;
+    }
+
+    .img-thumbnail {
+        padding: 0px !important;
+        border: none;
+        border-radius: 0px;
+        background: transparent;
+    }
+
+    .content .body-content .content-tab .tab-content .achievement .container .row .column-items .card {
+        width: 80%;
+        height: max-content;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px){ 
+
+    .content .body-content .content-tab .tab-content .achievement .container .row .column-items .card {
+        width: 60%;
+        height: max-content;
+        margin: 0 auto;
+    }
+
+    .img-thumbnail {
+        padding: 0px !important;
+        border: none;
+        border-radius: 0px;
+        background: transparent;
+    }
+}
+
+
+@media screen and (min-width: 992px) and (max-width: 1199px){
+    .content .body-content .content-tab .tab-content .portofolio .container-fluid .row .column-items .card {
+        height: 150px;
+    }
+
+}

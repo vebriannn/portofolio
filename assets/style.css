@@ -365,7 +365,7 @@
 
 .show-link {
     position: absolute;
-    bottom: 44px !important;
+    bottom: 20% !important;
 }
 
 .content .body-content .content-tab .tab-content .achievement .container .row .column-items .card a {
@@ -398,6 +398,11 @@
     border: none;
     border-radius: 0px;
     background: transparent;
+}
+
+
+.landscape {
+    width: 100% !important;
 }
 
 
@@ -451,7 +456,7 @@
     }
 
     .show-link {
-        bottom: 64px !important;
+        bottom: 20% !important;
     }
 
     .img-thumbnail {
@@ -462,13 +467,17 @@
     }
 
     .content .body-content .btn-content nav .nav-pills .nav-item .nav-link {
-        padding: 8px 10px;
+        padding: 8px 10px 4px 10px;
     }
 
     .content .body-content .content-tab .tab-content .achievement .container .row .column-items .card {
         width: 50%;
         height: max-content;
         margin: 0 auto;
+    }
+
+    .landscape {
+        width: 68% !important;
     }
 }
 
@@ -512,7 +521,7 @@
     }
 
     .show-link {
-        bottom: 64px !important;
+        bottom: 20% !important;
     }
 
     .img-thumbnail {
@@ -531,6 +540,10 @@
     .content .body-content .content-tab .tab-content .experience .container .row {
         display: flex;
         justify-content: space-around;
+    }
+
+    .landscape {
+        width: 60% !important;
     }
 }
 
@@ -574,7 +587,7 @@
     }
 
     .show-link {
-        bottom: 36px !important;
+        bottom: 20% !important;
     }
 
     .img-thumbnail {
@@ -588,6 +601,10 @@
         width: 80%;
         height: max-content;
         margin: 0 auto;
+    }
+
+    .landscape {
+        width: 100% !important;
     }
 }
 
@@ -604,6 +621,10 @@
         border: none;
         border-radius: 0px;
         background: transparent;
+    }
+    
+    .landscape {
+        width: 80% !important;
     }
 }
 

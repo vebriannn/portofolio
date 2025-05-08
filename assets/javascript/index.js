@@ -26,26 +26,26 @@ card.forEach((links) => {
     })
 });
 
-onload = function() {
-    const idLoading = document.getElementById('loading');
-    const idScreen = document.getElementById('loading-screen');
-    const content = document.getElementById('content');
-    const contenthead = document.querySelector('.head-content');
-    const contentbody = document.querySelector('.body-content');
-    const textloading = document.querySelector('.text-loading');
+// onload = function() {
+//     const idLoading = document.getElementById('loading');
+//     const idScreen = document.getElementById('loading-screen');
+//     const content = document.getElementById('content');
+//     const contenthead = document.querySelector('.head-content');
+//     const contentbody = document.querySelector('.body-content');
+//     const textloading = document.querySelector('.text-loading');
 
     
-    setTimeout(() => {
-        textloading.classList.add('show-text');
-    }, 2000)
-    setTimeout(() => {
-        idScreen.classList.add('load')
-        idLoading.style.display = "none";
-        content.style.display = "block";
-        // mengubah value property opacity css dari 0 ke 1 setelah delay 300ms
-        setTimeout(() => {
-            contenthead.style.opacity = "1";
-            contentbody.style.opacity = "1";
-        }, 300)
-    }, 4000)
-}
+//     setTimeout(() => {
+//         textloading.classList.add('show-text');
+//     }, 2000)
+//     setTimeout(() => {
+//         idScreen.classList.add('load')
+//         idLoading.style.display = "none";
+//         content.style.display = "block";
+//         // mengubah value property opacity css dari 0 ke 1 setelah delay 300ms
+//         setTimeout(() => {
+//             contenthead.style.opacity = "1";
+//             contentbody.style.opacity = "1";
+//         }, 300)
+//     }, 4000)
+// }

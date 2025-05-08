@@ -106,7 +106,7 @@
     height: max-content;
     padding-bottom: 80px;
     background-color: var(--bg-black);
-    display: none;
+    display: block;
 }
 
 /* .content .head-content,
